@@ -19,7 +19,7 @@ public class Calentador
     
     public void enfriar()
     {
-        if(temperatura>-10)
+        if(temperatura>-9)
         {
             temperatura=temperatura-incremento;
         }
