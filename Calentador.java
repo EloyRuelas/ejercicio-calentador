@@ -15,22 +15,37 @@ public class Calentador
     
     public void calentar()
     {
-        if(temperatura<max)
+        if(temperatura<=max)
         {
             temperatura=temperatura+incremento;
+            if(temperatura>max)
+            {
+                temperatura-=incremento;
+            }
         }
     }
     
     public void enfriar()
     {
-        if(temperatura>min)
+        if(temperatura>=min)
         {
             temperatura=temperatura-incremento;
+            if(temperatura<min)
+            {
+                temperatura+=incremento;
+            }
         }
     }
     
     public int checarTemperatura()
     {
             return temperatura;
+    }
+    public void modificarIncremento(int modIncre)
+    {
+        if(modIncre>0)
+        {
+            incremento=modIncre;
+        }
     }
 }
